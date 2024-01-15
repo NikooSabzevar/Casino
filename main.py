@@ -5,7 +5,6 @@ import os
 import time
 import keyboard
 import sys
-import psutil
 
 
 if "rows" not in st.session_state:
@@ -135,6 +134,3 @@ if exit_app:
     # Close streamlit browser tab
     keyboard.press_and_release('ctrl+w')
     # Terminate streamlit python process
-    pid = os.getpid()
-    p = psutil.Process(pid)
-    p.terminate()
